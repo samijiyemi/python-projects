@@ -1,15 +1,13 @@
-l1 = ["eat", "sleep", "repeat"]
-s1 = "geek"
+items = [
+    ("Product1", 10),
+    ("Product2", 1),
+    ("Product3", 9),
+    ("Product4", 8)
+]
 
-obj1 = enumerate(l1)
-obj2 = enumerate(s1)
+# items.sort(key=lambda item: item[1])
+# print(items)
 
-print("Return Type:", type(obj1))
-print(list(enumerate(l1)))
-
-print(list(enumerate(s1, 2)))
-print(type(s1))
-
-letters = ['a', 'b', 'c']
-letters.insert(2, '-')
-print(letters)
+# name = "ogbenisamu"
+# print(lambda name: name)
+# (lambda name: print(name))(name)
