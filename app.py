@@ -9,3 +9,7 @@ print(list(enumerate(l1)))
 
 print(list(enumerate(s1, 2)))
 print(type(s1))
+
+letters = ['a', 'b', 'c']
+letters.insert(2, '-')
+print(letters)
