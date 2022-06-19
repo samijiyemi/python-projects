@@ -1,7 +1,4 @@
-name1 = "ogbenisamu"
-name2 = "sam"
-
-name1, name2 = name2, name1
-
-print("name1", name1)
-print("name2", name2)
+point = {"x": 1, "y": 2}
+print(point)
+points = dict(x=1, y=2)
+print(points)
