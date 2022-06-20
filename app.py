@@ -1,18 +1,12 @@
-class Person:
-    default_name = "ogbenisamu"
-    default_email = "me@saijiyemi.co.uk"
+class Point:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
 
-    def __init__(self, name, email):
-        self.name = name
-        self.email = email
-
-    @classmethod
-    def zero(cls, username, email_address):
-        return cls(username, email_address)
-
-    def get_profile(self):
-        return f"my name is {self.name} my email is {self.email}"
+    def __eq__(self, others):
+        return self.x == others.x and self.y == others.y
 
 
-sam = Person.zero("ogbenisam", "samijiyemi@gmail.com")
-print(sam.get_profile())
+point = Point(1, 2)
+others = Point(1, 2)
+print(point == others)
