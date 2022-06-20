@@ -1,17 +1,17 @@
-from timeit import timeit
+class Person:
+    default_name = "ogbenisamu"
+    default_email = "me@saijiyemi.co.uk"
 
-code1 = """
+    def __init__(self, name, email):
+        self.name = name
+        self.email = email
 
-def calculate_xfactor(age):
-     if age <= 0:
-          raise ValueError("Age can't be zero or less")
-     return 10 / age
+    def get_profile(self):
+        return f"my name is {self.name} my email is {self.email}"
 
-try:
-    print(calculate_xfactor(-1))
-except ValueError as error:
-    pass
 
-"""
+Person.default_name = "sainthemiddle"
 
-print("First Code=", timeit(code1, number=100))
+sam = Person(Person.default_name, Person.default_email)
+print(Person.default_name)
+print(sam.get_profile())
