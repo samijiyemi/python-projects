@@ -6,12 +6,13 @@ class Person:
         self.name = name
         self.email = email
 
+    @classmethod
+    def zero(cls, username, email_address):
+        return cls(username, email_address)
+
     def get_profile(self):
         return f"my name is {self.name} my email is {self.email}"
 
 
-Person.default_name = "sainthemiddle"
-
-sam = Person(Person.default_name, Person.default_email)
-print(Person.default_name)
+sam = Person.zero("ogbenisam", "samijiyemi@gmail.com")
 print(sam.get_profile())
