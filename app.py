@@ -1,12 +1,4 @@
-phonebook = {
-    "sam": 9061903398,
-    "solomon": 234598,
-    "adeyemi": 87698
-}
-
-squares = {x: x * x for x in range(6)}
-
-
-print(phonebook)
-print('-' * 100)
-print(squares)
+def calculate_xfactor(age):
+    if age <= 0:
+        raise ValueError("Age can't be zero or less")
+    return 10 / age
