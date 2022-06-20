@@ -1,6 +1,12 @@
-point = dict(x=1, y=2)
-# print(point.get('a', 'Not Found!'))
-point['x'] = 10
-point['y'] = 20
-for key, value in point.items():
-    print(key, value)
+phonebook = {
+    "sam": 9061903398,
+    "solomon": 234598,
+    "adeyemi": 87698
+}
+
+squares = {x: x * x for x in range(6)}
+
+
+print(phonebook)
+print('-' * 100)
+print(squares)
