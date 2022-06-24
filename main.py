@@ -29,29 +29,21 @@ class Dog:
     """_summary_
     """
 
-    animal = "Dog"
-
-    # The Init Method or constructor
-    def __init__(self, breed, color):
-
-        #  Instance Variable
+    def __init(self, breed):
         self.breed = breed
+
+    def setColor(self, color):
         self.color = color
 
+    def getColor(self):
+        """_summary_
 
-# Object of a Dog Class
-Rudger = Dog("German Sheperd", "Black")
-Buzo = Dog("Local Dog", "Brown")
+        Returns:
+            _type_: _description_
+        """
+        return self.color
 
 
-print("Rudger Details")
-print("Rudger is a", Rudger.animal)
-print("Breed:", Rudger.breed)
-print("Color:", Rudger.color)
-
-print("-" * 100)
-
-print("Buzo Details")
-print("Buzo is a", Buzo.animal)
-print("Breed:", Buzo.breed)
-print("Color:", Buzo.color)
+Rudger = Dog()
+Rudger.setColor("Red")
+print(Rudger.getColor())
