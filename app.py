@@ -1,12 +1,14 @@
-class Point:
-    def __init__(self, x, y):
-        self.x = x
-        self.y = y
+class TagCloud:
+    def __init__(self):
+        self.tags = {}
 
-    def __eq__(self, others):
-        return self.x == others.x and self.y == others.y
+    def add(self, tag):
+        self.tags[tag.lower()] = self.tags.get(tag.lower(), 0) + 1
 
 
-point = Point(1, 2)
-others = Point(1, 2)
-print(point == others)
+cloud = TagCloud()
+cloud.add("python")
+cloud.add("python")
+cloud.add("python")
+cloud.add("Javascript")
+print(cloud.tags)
