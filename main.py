@@ -92,7 +92,70 @@ class Employee(Person):
         return True
 
 
-emp = Person("Sam")
-print(emp._get_name(), emp.is_employee())
-emp = Employee("Ogbenisamu")
-print(emp._get_name(), emp.is_employee())
+# another class
+
+
+# Parent Class
+class Person(object):
+    #  init constructor
+    def __init__(self, name, idnumber):
+        self.name = name
+        self.idnumber = idnumber
+    # display self
+
+    def _display_self(self):
+        print(self.name)
+        print(self.idnumber)
+
+# Child Class
+
+
+class Employee(Person):
+    def __init__(self, name, idnumber, salary, post):
+        self.salary = salary
+        self.post = post
+
+    # Invoking the __init__ of the parent class
+        Person.__init__(self, name, idnumber)
+
+
+class Child:
+
+    def __init__(self, name):
+        self.name = name
+
+    def _get_name(self):
+        return self.name
+
+    def _is_student(self):
+        return False
+
+
+class Student(Child):
+
+    def _is_student(self):
+        return True
+
+
+class Parent:
+    """_summary_
+    """
+
+    def func1(self):
+        print("This is a parent class")
+
+
+class Child(Parent):
+    """_summary_
+
+    Args:
+        Parent (_type_): _description_
+    """
+
+    def func2(self):
+        print("This is a child class")
+
+
+Obj = Child()
+Obj.func1()
+Obj.func2()
