@@ -1,14 +1,20 @@
-class TagCloud:
-    def __init__(self):
-        self.tags = {}
+class Product:
 
-    def add(self, tag):
-        self.tags[tag.lower()] = self.tags.get(tag.lower(), 0) + 1
+    """_summary_
+    """
+
+    def __init__(self, price):
+        self.price = price
+
+    @property
+    def price(self):
+        return self.__price
+
+    def set_price(self, value):
+        if value < 0:
+            raise ValueError("price cannot be negative!")
+        self.__price(value)
 
 
-cloud = TagCloud()
-cloud.add("python")
-cloud.add("python")
-cloud.add("python")
-cloud.add("Javascript")
-print(cloud.tags)
+product = Product(-50)
+print(product.price)
