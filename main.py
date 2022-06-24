@@ -156,6 +156,28 @@ class Child(Parent):
         print("This is a child class")
 
 
-Obj = Child()
-Obj.func1()
-Obj.func2()
+class Mother:
+    mothername = ""
+
+    def mother(self):
+        print(self.mothername)
+
+
+class Father:
+    fathername = ""
+
+    def father(self):
+        print(self.fathername)
+
+
+class Son(Mother, Father):
+
+    def parents(self):
+        print(f"Father: {self.fathername}")
+        print(f"Mothername: {self.mothername}")
+
+
+samson = Son()
+samson.mothername = "Asake"
+samson.fathername = "Ololade"
+samson.parents()
