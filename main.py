@@ -44,6 +44,55 @@ class Dog:
         return self.color
 
 
-Rudger = Dog()
-Rudger.setColor("Red")
-print(Rudger.getColor())
+class GeekforGeeks:
+
+    def __init__(self):
+        self.geek = "GeekforGeeks"
+
+    def _print_geeks(self):
+        print(self.geek)
+
+
+class Employee:
+    def __init__(self):
+        """_summary_
+        """
+        print("Employee Created!")
+
+    def __del__(self):
+        print("Destructor Called, Employee Deleted!")
+
+    def set_name(self, name):
+        self.name = name
+
+    def get_name(self):
+        return self.name
+
+
+class Person:
+    """_summary_
+    """
+
+    # Constructor
+    def __init__(self, name):
+        self.name = name
+
+    # get name
+    def _get_name(self):
+        return self.name
+
+    # check if the user is employee
+    def is_employee(self):
+        return False
+
+
+class Employee(Person):
+
+    def is_employee(self):
+        return True
+
+
+emp = Person("Sam")
+print(emp._get_name(), emp.is_employee())
+emp = Employee("Ogbenisamu")
+print(emp._get_name(), emp.is_employee())
